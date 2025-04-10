@@ -1,6 +1,6 @@
 /* global Zinnia */
 
-import { getSites } from './lib/sites'
+import { getSites } from './lib/sites.js'
 import { measure } from './lib/measure.js'
 import { submit } from './lib/submit-measurement.js'
 import { pickRandomItem } from './lib/random.js'
