@@ -8,11 +8,14 @@ import { MEASUREMENT_DELAY } from './lib/constants.js'
 
 let sitesToTest = getSites();
 
+const ipResponse = await fetch('https://api.ipify.org?format=json');
+const ipData = await ipResponse.json();
 
 while (true) {
   try {
     const measurement = await measure(
-      pickRandomItem(sitesToTest)
+      pickRandomItem(sitesToTest),
+      ipData
     )
     console.log('measurement:', measurement)
     await submit(measurement)
