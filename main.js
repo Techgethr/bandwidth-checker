@@ -15,7 +15,7 @@ while (true) {
   try {
     const measurement = await measure(
       pickRandomItem(sitesToTest),
-      ipData
+      ipData.ip
     )
     console.log('measurement:', measurement)
     await submit(measurement)
